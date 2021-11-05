@@ -11,32 +11,33 @@ form{
 input{
   -webkit-appearance: none;
   appearance: none;
-  border: 1px solid grey;
   border-radius: 15px;
+  text-align: center;
 }
-input:focus{
-  background-color: rgb(209, 209, 209);
+input:focus, input:active{
+  background-color: rgba(0, 0, 0, 0.568);
+  color: white;
+  outline: none;
+  border: none;
 }
 button{
-  margin-top: 10%;
+  width: min(10em, 20em);
+  height: 5em;
   text-transform: uppercase;
   letter-spacing: 2.5px;
   font-weight: 500;
   color: #000;
-  background-color: #fff;
+  background-color: rgb(189, 189, 189);
   border: none;
   border-radius: 45px;
-  transition: all 0.3s ease 0s;
   outline: none;
-}
-button:hover{
-  background-color: #2EE59D;
-  box-shadow: 0px 5px 10px rgba(46, 229, 157, 0.4);
-  color: #fff;
-  transform: translateY(-3px);
+  margin: auto;
+  margin-top: 10%;
 }
 .clickable:hover{
-  background-color: #2EE59D;
+  background-color: rgb(163, 226, 226);
+  box-shadow: 0px 5px 10px rgba(143, 143, 143, 0.4);
+  color: #fff;
 }
 .outer{
   display: flex;
