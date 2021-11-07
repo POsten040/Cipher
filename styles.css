@@ -47,7 +47,7 @@ button{
 .container{
   max-width: 500vw;
   width: fit-content;
-  padding: 10%
+  padding: 10%;
 }
 .box{
   display: none;
