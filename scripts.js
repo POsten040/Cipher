@@ -34,9 +34,11 @@ function ResetLabel(){
 function ResetMessages(target){
   setTimeout(() =>{
     $(`.${target}`).text(`Message Erased`);
+    console.log('erased')
   }, 3000);
   setTimeout(()=> {
     $(`.${target}`).text(`${target} Sentence`);
+    console.log('do it again')
   }, 5000);
 };
 
@@ -52,14 +54,15 @@ $(document).ready(function(){
     $(".box").show();
     secretPhrase = Combine(userInput);
     $("#user-input").val("");
+    ResetLabel();
   });
   // CHANGE SECRET MESSAGE
   $(".Secret").click(function(){
+    console.log('secret clicked')
     $(".Secret").text(secretPhrase);
     ResetMessages("Secret");
     userInput = EmptyString();
     secretPhrase = EmptyString();
-    ResetLabel();
   });
   //CHANGE REGULAR MESSAGE
   $(".Regular").click(function(){
@@ -67,6 +70,5 @@ $(document).ready(function(){
     ResetMessages("Regular");
     secretPhrase = EmptyString();
     userInput = EmptyString();
-    ResetLabel();
   });
 });
